@@ -3,14 +3,14 @@
         let getPassengers = (elevator, floors) => {
             floors.forEach((floor) => {
                 floor.on("up_button_pressed down_button_pressed", () => {
-                    elevator.goToFloor(floor.floorNum())
+                      elevator.goToFloor(floor.floorNum())  
                 })
             })
         }
         
         let empty = (elevator) => {
-            elevator.getPressedFloors().forEach((destination) => {
-                elevator.goToFloor(destination)
+            elevator.getPressedFloors().forEach((floor) => {
+                elevator.goToFloor(floor)
             })
         }
         
@@ -21,7 +21,7 @@
             })
         })
     },
-    update: function(dt, elevators, floors) {
+        update: function(dt, elevators, floors) {
 
-    }
+        }
 }
